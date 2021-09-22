@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+  const styles = {
+    marginTop: '80px'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Martina De León
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <>
+      <NavBar/>
+    </>
+    <main style={styles}>
+      <h1>Próximamente...</h1>
+      <h2>¡Gracias por esperarnos!</h2>
+    </main>
+    </>
   );
 }
 
