@@ -1,19 +1,13 @@
+//import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
-  const styles = {
-    marginTop: '80px'
-  }
   return (
     <>
-    <>
       <NavBar/>
-    </>
-    <main style={styles}>
-      <h1>Próximamente...</h1>
-      <h2>¡Gracias por esperarnos!</h2>
-    </main>
+      <ItemListContainer/>
     </>
   );
 }

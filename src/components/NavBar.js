@@ -1,7 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar,Container,Nav,NavDropdown} from 'react-bootstrap';
-import logo from './img/logo.png'
+import logo from '../assets/imgs/logo.png'
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
     return (
@@ -23,6 +24,7 @@ const NavBar = () => {
                         <NavDropdown.Item href="#action/3.4" className="alignDropdown">Ropa deportiva de hombre</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
+                    <CartWidget itemAmount="4"/>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
