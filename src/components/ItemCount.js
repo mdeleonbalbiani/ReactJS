@@ -18,6 +18,7 @@ const ItemCount = (props) => {
     const stylesCounter = {
         display: "flex",
         justifyContent:"center",
+        alignItems:"baseline"
     }
     const stylesAmount = {width:"20%",}
 
