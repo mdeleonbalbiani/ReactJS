@@ -3,9 +3,9 @@ import ItemCount from './ItemCount'
 
 const ItemListContainer = () => {
     return( 
-    <div>
-        <ItemCount initial={1} stock={20}/>
-    </div>
+    <>
+        <ItemCount productName="ENA Whey Protein True Made 2lb - Vainilla" initial={1} stock={20}/>
+    </>
     )
 }
 

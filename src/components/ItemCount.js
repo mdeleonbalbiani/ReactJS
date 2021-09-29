@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-import {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const ItemCount = (props) => {
-    const {initial, stock} = props;
+    const {productName, initial, stock} = props;
     let [amount, setAmout] = useState(initial);
     const [stockAvailable, setStockAvailable] = useState(stock);
 
@@ -45,7 +45,7 @@ const ItemCount = (props) => {
 
     return(
         <div style={styles}>
-            <p>ENA Whey Protein True Made 2lb - Vainilla</p>
+            <p>{productName}</p>
             <div style={stylesCounter}>
                 <Button variant="outline-secondary" onClick={()=>decreaseToMin()}>Min</Button>
                 <Button variant="outline-secondary" onClick={()=>onRemove()}>-</Button>
