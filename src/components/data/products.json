@@ -1,0 +1,30 @@
+[
+    {
+        "id":0,
+        "title":"ENA Whey Protein True Made 2lb - Vainilla",
+        "price":2200,
+        "pictureURL":"https://res.cloudinary.com/dus99ir1n/image/upload/v1633115490/GlanGlow/ENAvainilla_p3h935.png",
+        "stock": 20
+    },
+    {
+        "id":1,
+        "title":"Optimum Nutrition Gold Standard 5Lb - Chocolate",
+        "price":6700,
+        "pictureURL":"https://res.cloudinary.com/dus99ir1n/image/upload/v1633115490/GlanGlow/OptimusNutritionChocolate5lb_qqb0or.png",
+        "stock":15
+    },
+    {
+        "id":2,
+        "title":"Optimum Nutrition Gold Standard 2Lb - Chocolate",
+        "price":3500,
+        "pictureURL":"https://res.cloudinary.com/dus99ir1n/image/upload/v1633115490/GlanGlow/OptimusNutritionChocolate2lb_onwcvo.png",
+        "stock":18
+    },
+    {
+        "id":3,
+        "title":"Star Nutrition Premium Whey Protein 2lb - Chocolate",
+        "price":1900,
+        "pictureURL":"https://res.cloudinary.com/dus99ir1n/image/upload/v1633115490/GlanGlow/StarChocolate2lb_ife19n.png",
+        "stock":12
+    }
+]
