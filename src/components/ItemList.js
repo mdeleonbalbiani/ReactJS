@@ -7,7 +7,7 @@ function ItemList( {items} ) {
     return (
         <>
           {items.length ? (
-            items.map((elem, idx) => <Item props={elem} key={idx} />)
+            items.map((elem, id) => <Item props={elem} key={id} />)
           ) : (
             <Spinner animation="border" variant="primary" style={style}/>
           )}
