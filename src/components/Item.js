@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Badge } from "react-bootstrap";
 import ItemCount from './ItemCount';
+import ItemDetailContainer from './ItemDetailContainer';
 
 const Item = (props) => {
     const { id, title, price, pictureURL, stock } = props.props;
@@ -32,6 +33,7 @@ const Item = (props) => {
                 <span>
                 <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                 </span>
+                <ItemDetailContainer props={props.props} />
                 <span>
                   <p style={priceStyle}>Precio: ${price}</p>
                 </span>
