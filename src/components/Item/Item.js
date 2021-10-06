@@ -2,28 +2,15 @@ import React from 'react'
 import { Card, Badge } from "react-bootstrap";
 import ItemCount from './ItemCount';
 import ItemDetailContainer from './ItemDetailContainer';
+import './Item.css'
 
 const Item = (props) => {
-    const { id, title, price, pictureURL, stock } = props.props;
-    
-    const styles = {
-        margin:"5%",
-        textAlign:"center"
-    }
-    const imageStyle = {
-      width:"30%",
-      display:"block",
-      margin:"auto"
-    }
-    const priceStyle = {
-      fontSize:"18px",
-      fontWeight:"bold"
-    }
+    const { id, category, title, price, pictureURL, stock } = props.props;
 
     return (
         <div className="col-sm-6 col-md-3">
-          <Card style={styles}>
-            <Card.Img variant="top" src={pictureURL} style={imageStyle} />
+          <Card className="card">
+            <Card.Img className="cardImage" variant="top" src={pictureURL} />
             <Card.Body>
               <Card.Title>{title}</Card.Title>
               <Card.Text>
@@ -35,7 +22,7 @@ const Item = (props) => {
                 </span>
                 <ItemDetailContainer props={props.props} />
                 <span>
-                  <p style={priceStyle}>Precio: ${price}</p>
+                  <p className="cardPrice">Precio: ${price}</p>
                 </span>
               </Card.Text>
               <ItemCount initial={1} stock={stock}/>

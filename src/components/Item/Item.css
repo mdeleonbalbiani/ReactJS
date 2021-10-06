@@ -1,0 +1,19 @@
+/* -- ItemList --*/
+.spinner{
+    margin-top: "3%";
+}
+
+/* -- Item --*/
+.card{
+    margin:"5%";
+    text-align :"center";
+}
+.cardImage{
+    width:"35%";
+    display:"block";
+    margin:"auto"
+}
+.cardPrice{
+    font-size:"18px";
+    font-weight:"bold"
+}

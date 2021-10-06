@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Col } from "react-bootstrap";
+import './Item.css'
+import { CardGroup } from "react-bootstrap";
 import ItemList from './ItemList'
-import products from './data/products.json'
+import products from '../data/products.json'
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
+    let {category} = useParams();
+    console.log({category});
     const [productList, setProductList] = useState(0);
 
     useEffect(() => {
@@ -20,11 +24,9 @@ const ItemListContainer = () => {
 
     return( 
         <>
-          <Row className="item-list-container">
-            <Col md={12} className="d-flex justify-content-center">
-              <ItemList items={productList} />
-            </Col>
-          </Row>
+          <CardGroup className="d-flex justify-content-center container">
+              <ItemList items={productList} category={category}/>
+          </CardGroup>
       </>
     )
 }

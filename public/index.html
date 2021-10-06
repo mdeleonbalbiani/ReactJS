@@ -13,8 +13,20 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Gran Glow</title>
   </head>
-  <body style="background-color: rgb(39, 38, 38);">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+  </script>
 </html>

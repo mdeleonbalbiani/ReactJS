@@ -1,14 +1,31 @@
 //import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/Item/ItemListContainer';
+import Home from './components/Home/Home';
+import AboutUs from './components/AboutUs/AboutUs';
+import Cart from './components/Cart/CartContext'
 
 function App() {
   return (
-    <>
-      <NavBar/>
-      <ItemListContainer/>
-    </>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+            <Home />
+        </Route>
+        <Route exact path="/aboutUs">
+            <AboutUs />
+        </Route>
+        <Route exact path="/cart">
+            <Cart />
+        </Route>
+        <Route path={`/:category`}>
+            <ItemListContainer />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

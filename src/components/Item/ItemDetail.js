@@ -1,5 +1,6 @@
 import React from "react";
-import { Modal, Badge } from "react-bootstrap";
+import '../Item/Item.css'
+import { Badge } from "react-bootstrap";
 
 const ItemDetail = (props) => {
     const {id, title, price, description, pictureURL, stock} = props.props;
@@ -14,11 +15,8 @@ const ItemDetail = (props) => {
 
     return(
         <>
-        <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
             <div style={styles}>
+                <h2>{title}</h2>
                 <img src={pictureURL} alt="Imagen del producto"/>
                 <p>{description}</p>
                 <p style={stylesPrice}>Precio: ${price}</p>
@@ -29,7 +27,6 @@ const ItemDetail = (props) => {
                     <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                 </span>
             </div>
-        </Modal.Body>
         </>
     )
 }

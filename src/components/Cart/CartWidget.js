@@ -1,5 +1,5 @@
 import React from 'react'
-import { IoCartOutline } from '../../node_modules/react-icons/io5';
+import { IoCartOutline } from '../../../node_modules/react-icons/io5';
 
 const CartWidget = (props) => {
     const {itemAmount} = props;
