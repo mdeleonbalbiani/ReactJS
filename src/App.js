@@ -1,5 +1,5 @@
-//import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Item/ItemListContainer';
@@ -21,9 +21,7 @@ function App() {
         <Route exact path="/cart">
             <Cart />
         </Route>
-        <Route path={`/:category`}>
-            <ItemListContainer />
-        </Route>
+        <Route path='/:itemCategory' exact render= {routeProps =><ItemListContainer {...routeProps} key={document.location.href} />} />
       </Switch>
     </Router>
   );

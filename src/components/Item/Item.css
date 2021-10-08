@@ -1,19 +1,52 @@
-/* -- ItemList --*/
-.spinner{
-    margin-top: "3%";
-}
-
 /* -- Item --*/
 .card{
-    margin:"5%";
-    text-align :"center";
+    margin:5%;
+    text-align:center;
+    font-size: 12px;
+    transition: transform .2s;
+    background-color: honeydew;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.cardBody{
+    padding: 2rem;
 }
 .cardImage{
-    width:"35%";
-    display:"block";
-    margin:"auto"
+    width:35%;
+    display:block;
+    margin-top:2rem;
+}
+.cardTitle{
+    font-size: 15px;
 }
 .cardPrice{
-    font-size:"18px";
-    font-weight:"bold"
+    font-size: 18px;
+    font-weight: bold;
+    margin: 3%;
+}
+.cardButton{
+    font-size: 15px;
+    padding: 6px 12px;
+    margin: 5%;
+    background-color: honeydew;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.cardButton:hover {
+    background-color: #555555;
+    color: white;
+}
+
+/* -- ItemDetail --*/
+.details{
+    text-align:center;
+    height: 100%;
+}
+.detailsPrice{
+    font-size:20px;
+    font-weight:bold;
 }
