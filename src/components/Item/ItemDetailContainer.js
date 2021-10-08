@@ -5,7 +5,7 @@ import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = (props) => {
   return (
-    <ItemDetail props={props.props} />
+      <ItemDetail props={props.props} />
   );
 }
 

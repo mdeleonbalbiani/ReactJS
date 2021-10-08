@@ -28,14 +28,14 @@ const Item = (props) => {
                 <span>
                   <p className="cardPrice">Precio: ${price}</p>
                 </span>
-                <Link to={`${url}/${title}`} className="cardButton">Ver Detalle</Link>
+                <Link to={`${url}/product/${title}`} className="cardButton">Ver Detalle</Link>
               </Card.Text>
               </Card.Body>
           </Card>
         </div>
 
         <Switch>
-        <Route path={`${path}/:product`}>
+        <Route path={`${path}/product/:product`}>
           <ItemDetailContainer props={props.props} />
         </Route>
         </Switch>

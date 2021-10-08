@@ -6,6 +6,7 @@ import ItemListContainer from './components/Item/ItemListContainer';
 import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import Cart from './components/Cart/CartContext'
+import ItemDetailContainer from './components/Item/ItemDetailContainer';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route exact path="/cart">
             <Cart />
         </Route>
-        <Route path='/:itemCategory' exact render= {routeProps =><ItemListContainer {...routeProps} key={document.location.href} />} />
+        <Route path='/category/:itemCategory' exact render= {routeProps =><ItemListContainer {...routeProps} key={document.location.href} />} />
       </Switch>
     </Router>
   );
