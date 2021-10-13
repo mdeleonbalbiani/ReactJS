@@ -1,3 +1,6 @@
+span{
+    font-size: 12px;
+}
 /* -- Item --*/
 .card{
     margin:5%;
@@ -21,6 +24,7 @@
     font-size: 15px;
 }
 .cardPrice{
+    display: block;
     font-size: 18px;
     font-weight: bold;
     margin: 3%;
@@ -46,7 +50,46 @@
     text-align:center;
     height: 100%;
 }
+.itemDescription{
+    font-size: 15px;
+}
 .detailsPrice{
     font-size:20px;
     font-weight:bold;
+}
+
+/* -- ItemCount --*/
+.counterContainerStyle{
+    font-size:18px;
+    text-align:center;
+    margin: 3%;
+    padding: 1%;
+}
+.counterStyle{
+    display: flex;
+    justify-content:center;
+    align-items:baseline;
+}
+.quantitySytle{
+    width: 10%;
+}
+.addToCart{
+    font-size: 15px;
+}
+.finishBuying{
+    margin: 2%;
+}
+.finishBuyingButton{
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: honeydew;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.finishBuyingButton:hover{
+    background-color: #555555;
+    color: white;
 }

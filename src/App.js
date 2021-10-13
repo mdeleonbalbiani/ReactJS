@@ -22,7 +22,19 @@ function App() {
         <Route exact path="/cart">
             <Cart />
         </Route>
-        <Route path='/category/:itemCategory' exact render= {routeProps =><ItemListContainer {...routeProps} key={document.location.href} />} />
+
+        <Route path="/category/nutrition">
+            <ItemListContainer itemCategory="nutrition"/>
+        </Route>
+        <Route path="/category/food">
+            <ItemListContainer itemCategory="food"/>
+        </Route>
+        <Route path="/category/nutrition/:id">
+            <ItemDetailContainer/>
+        </Route>
+        <Route path="/category/food/:id">
+            <ItemDetailContainer/>
+        </Route>
       </Switch>
     </Router>
   );

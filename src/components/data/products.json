@@ -1,6 +1,6 @@
 [
     {
-        "id":0,
+        "id":"nut0",
         "category":"nutrition",
         "title":"ENA Whey Protein True Made 2lb - Vainilla",
         "price":2200,
@@ -9,7 +9,7 @@
         "stock": 20
     },
     {
-        "id":1,
+        "id":"nut1",
         "category":"nutrition",
         "title":"Optimum Nutrition Gold Standard 5Lb - Chocolate",
         "price":6700,
@@ -18,7 +18,7 @@
         "stock":15
     },
     {
-        "id":2,
+        "id":"nut2",
         "category":"nutrition",
         "title":"Optimum Nutrition Gold Standard 2Lb - Chocolate",
         "price":3500,
@@ -26,7 +26,7 @@
         "stock":18
     },
     {
-        "id":3,
+        "id":"nut3",
         "category":"nutrition",
         "title":"Star Nutrition Premium Whey Protein 2lb - Chocolate",
         "price":1900,
@@ -35,7 +35,7 @@
         "stock":12
     },
     {
-        "id":4,
+        "id":"fo0",
         "category":"food",
         "title":"Joka Crema de Maní Proteica 350g",
         "price":290,
@@ -44,7 +44,7 @@
         "stock":5
     },
     {
-        "id":5,
+        "id":"fo1",
         "category":"food",
         "title":"Banana Brasil Nutsbar Caja x12 - Castañas y Chocolate",
         "price":444,
@@ -53,7 +53,7 @@
         "stock":33
     },
     {
-        "id":6,
+        "id":"fo2",
         "category":"food",
         "title":"Banana Brasil Nutsbar Caja x12 - Goji y Cranberry",
         "price":444,
@@ -62,7 +62,7 @@
         "stock":21
     },
     {
-        "id":7,
+        "id":"fo3",
         "category":"food",
         "title":"Banana Brasil Nutsbar Caja x12 - Coco",
         "price":444,

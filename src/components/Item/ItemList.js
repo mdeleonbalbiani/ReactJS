@@ -9,7 +9,7 @@ function ItemList( {items} ) {
     }
 
     const productList = items.length ? (
-      items.map((elem, id) => <Item props={elem} key={id}/>)
+      items.map((elem, index) => <Item props={elem} key={index} />)
     ) : (
       <Spinner animation="border" variant="primary" style={Style}/>
     )

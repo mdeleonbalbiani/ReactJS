@@ -5,7 +5,7 @@ import ItemDetailContainer from './ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch} from "react-router-dom";
 
 const Item = (props) => {
-    const { id, category, title, price, pictureURL, stock } = props.props;
+    const { id, title, price, pictureURL, stock, items } = props.props;
     let { path, url } = useRouteMatch();
 
     return (
@@ -22,22 +22,15 @@ const Item = (props) => {
                 <span>
                 <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                 </span>
-                {/* <span>
-                <Badge pill bg="primary">Categoria: {category}</Badge>
-                </span> */}
-                <span>
-                  <p className="cardPrice">Precio: ${price}</p>
-                </span>
-                <Link to={`${url}/product/${title}`} className="cardButton">Ver Detalle</Link>
+                <span className="cardPrice"> Precio: ${price} </span>
+                <Link to={`${url}/product/${id}`} className="cardButton">Ver Detalle</Link>
               </Card.Text>
               </Card.Body>
           </Card>
         </div>
 
         <Switch>
-        <Route path={`${path}/product/:product`}>
-          <ItemDetailContainer props={props.props} />
-        </Route>
+          <Route path={`${path}/product/:id`} children={<ItemDetailContainer />} />
         </Switch>
       </Router>
         

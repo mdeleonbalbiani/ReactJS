@@ -4,22 +4,37 @@ import { Badge } from "react-bootstrap";
 import ItemCount from './ItemCount'
 
 const ItemDetail = (props) => {
-    const {id, title, price, description, pictureURL, stock} = props.props;
-    
+    const { id, title, description, price, pictureURL, stock} = props.props;
+
+    const productCart = [];
+
+    const product = {
+        id: id,
+        title: title,
+        stock: stock,
+        initial: 1,
+        onAdd: (stock, cantidad) =>{
+            alert(`Se agregarán ${cantidad} unidades al carrito`)
+            return stock - cantidad;
+        },
+        precio: price,
+        productCart: productCart,
+    };
+
     return(
         <>
             <div className="details">
                 <h2>{title}</h2>
                 <img src={pictureURL} alt="Imagen del producto"/>
-                <p>{description}</p>
+                <p className="itemDescription">{description}</p>
                 <p className="detailsPrice" >Precio: ${price}</p>
-                <span style={{ textAlign: "center" }}>
+                <span>
                     <Badge pill bg="success">Código: {id}</Badge>
                 </span>
                 <span>
                     <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                 </span>
-                <ItemCount initial={1} stock={stock}/>
+                <ItemCount props={product}/>
             </div>
         </>
     )
