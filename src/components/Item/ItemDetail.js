@@ -6,19 +6,12 @@ import ItemCount from './ItemCount'
 const ItemDetail = (props) => {
     const { id, title, description, price, pictureURL, stock} = props.props;
 
-    const productCart = [];
-
     const product = {
         id: id,
         title: title,
         stock: stock,
         initial: 1,
-        onAdd: (stock, cantidad) =>{
-            alert(`Se agregarán ${cantidad} unidades al carrito`)
-            return stock - cantidad;
-        },
         precio: price,
-        productCart: productCart,
     };
 
     return(

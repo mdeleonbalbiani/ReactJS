@@ -5,38 +5,42 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Item/ItemListContainer';
 import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
-import Cart from './components/Cart/CartContext'
+import Cart from './components/Cart/Cart'
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
+import CartContext from './context/cartContext';
+
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path="/">
-            <Home />
-        </Route>
-        <Route exact path="/aboutUs">
-            <AboutUs />
-        </Route>
-        <Route exact path="/cart">
-            <Cart />
-        </Route>
+    <CartContext>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+              <Home />
+          </Route>
+          <Route exact path="/aboutUs">
+              <AboutUs />
+          </Route>
+          <Route exact path="/cart">
+              <Cart />
+          </Route>
 
-        <Route path="/category/nutrition">
-            <ItemListContainer itemCategory="nutrition"/>
-        </Route>
-        <Route path="/category/food">
-            <ItemListContainer itemCategory="food"/>
-        </Route>
-        <Route path="/category/nutrition/:id">
-            <ItemDetailContainer/>
-        </Route>
-        <Route path="/category/food/:id">
-            <ItemDetailContainer/>
-        </Route>
-      </Switch>
-    </Router>
+          <Route path="/category/nutrition">
+              <ItemListContainer itemCategory="nutrition"/>
+          </Route>
+          <Route path="/category/food">
+              <ItemListContainer itemCategory="food"/>
+          </Route>
+          <Route path="/category/nutrition/:id">
+              <ItemDetailContainer/>
+          </Route>
+          <Route path="/category/food/:id">
+              <ItemDetailContainer/>
+          </Route>
+        </Switch>
+      </Router>
+    </CartContext>
   );
 }
 
