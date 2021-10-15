@@ -3,7 +3,8 @@ import { createContext, useState } from "react";
 export const CartCtxt = createContext();
 
 const CartContext = ({children}) => {
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [totalItems, setTotalItems] = useState(0);
 
     const addToCart = (product) => {
         const newItem = cart.find(item=>item.id === product.id)
@@ -13,30 +14,25 @@ const CartContext = ({children}) => {
         }
         else{
             setCart([...cart, product]);
+            setTotalItems(totalItems + 1);
         }
     }
 
     const emptyCart = () => {
         if (window.confirm("¿Estó seguro que desea vaciar el carrito?")) {
-            setCart([])
+            setCart([]);
+            setTotalItems(0)
         }
     }
 
     const deleteItem = (id) => {
         const newCartList = cart.filter((item) => item.id !== id);
         setCart(newCartList);
+        setTotalItems(totalItems - 1)
     }
 
-/*     const isInCart = (id, quantity) => {
-        const newItem = cart.find(item=>item.id === id)
-        if(newItem){
-            const itemIndex = cart.indexOf(newItem)
-            cart[itemIndex].quantity += quantity;
-        }
-    } */
-
     return (
-        <CartCtxt.Provider value={ {cart, setCart, addToCart, emptyCart, deleteItem} }>
+        <CartCtxt.Provider value={ {cart, setCart, addToCart, emptyCart, deleteItem, totalItems} }>
          {children}
         </CartCtxt.Provider>
     )

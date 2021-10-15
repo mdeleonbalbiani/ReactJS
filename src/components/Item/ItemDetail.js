@@ -9,6 +9,7 @@ const ItemDetail = (props) => {
     const product = {
         id: id,
         title: title,
+        pictureURL: pictureURL,
         stock: stock,
         initial: 1,
         precio: price,

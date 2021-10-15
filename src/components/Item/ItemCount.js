@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { CartCtxt } from '../../context/cartContext';
 
 const ItemCount = (props) => {
-    const {stock, initial, id, title} = props.props;
+    const {stock, initial, id, title, pictureURL, precio} = props.props;
 
     const [quantity, setQuantity] = useState(initial);
     const [stockAvailable, setStockAvailable] = useState(stock);
@@ -29,7 +29,8 @@ const ItemCount = (props) => {
     const productToBuy = {
         "id":id,
         "title":title,
-        "quantity":quantity
+        "quantity":quantity,
+        "pictureURL":pictureURL
     }
 
     return(
