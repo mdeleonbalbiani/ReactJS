@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import './Item.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -27,10 +26,11 @@ const ItemCount = (props) => {
     }
 
     const productToBuy = {
-        "id":id,
-        "title":title,
-        "quantity":quantity,
-        "pictureURL":pictureURL
+        id:id,
+        title:title,
+        quantity:quantity,
+        pictureURL:pictureURL,
+        price:precio
     }
 
     return(

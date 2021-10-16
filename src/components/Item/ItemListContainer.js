@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import './Item.css'
+import React, { useState, useEffect } from 'react';
 import { CardGroup } from "react-bootstrap";
 import ItemList from './ItemList'
 import products from '../data/products.json'

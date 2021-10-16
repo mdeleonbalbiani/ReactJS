@@ -1,5 +1,4 @@
 import React from 'react'
-import './Item.css'
 import { Card, Badge } from "react-bootstrap";
 import ItemDetailContainer from './ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch} from "react-router-dom";

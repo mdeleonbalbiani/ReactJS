@@ -1,21 +1,169 @@
-/*  -- CART -- */
-.cartItem{
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
+
+/*  -- GENERAL -- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin: 1%;
+    font-size: 35px;
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(199, 56, 108, 1),-3px 0px 14px rgba(199, 44, 127, 1);
+    color: rgb(20, 20, 20);
+    letter-spacing: 5px;
+}
+html {
+    font-size: 62.5%;
+}
+header{
+    background-color: #666666;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+span{
+    font-size: 12px;
+}
+
+
+/*  -- NAV BAR -- */
+.navbar {
     display: flex;
-    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
     width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link{
+        color: black;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/*  -- CART -- */
+
+.cartItem{
+    margin: 0 auto;
+    width: 600px;
     border-bottom: 1px solid rgb(37, 37, 218);
     padding: 2%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
 .cartDetail{
     display: flex;
+    align-items: center;
 }
 .cartImg{
     height: 20vh;
     margin: 2%;
 }
+.cartTitle{
+    text-align: left;
+}
+.cartInfo{
+    display: flex;
+    margin: 3%;
+    justify-content: space-around;
+}
 .cartCross{
     color: rgb(196, 36, 156);
     margin-left: 5%;
+    float: right;
+    cursor: pointer;
+}
+.totalPrice{
+    text-align: right;
+    margin-right: 28%;
+}
+.totalPriceNumber{
+    font-size: 20px;
+    padding-top: 3%;
 }
 .backToHome{
     display: flex;
@@ -52,4 +200,101 @@
 .cartButtonFinish:hover{
     background-color: rgb(177, 49, 145) ;
     border: rgb(177, 49, 145);
+}
+
+
+/*  -- ITEM -- */
+
+.card{
+    margin:5%;
+    text-align:center;
+    font-size: 12px;
+    transition: transform .2s;
+    background-color: honeydew;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.cardBody{
+    padding: 2rem;
+}
+.cardImage{
+    width:35%;
+    display:block;
+    padding-top: 2rem;
+    margin: auto;
+}
+.cardTitle{
+    font-size: 15px;
+}
+.cardPrice{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 3%;
+}
+.cardButton{
+    font-size: 15px;
+    padding: 6px 12px;
+    margin: 5%;
+    background-color: honeydew;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.cardButton:hover {
+    background-color: #555555;
+    color: white;
+}
+
+/*  -- ITEM DETAIL-- */
+
+.details{
+    text-align:center;
+    height: 100%;
+}
+.itemDescription{
+    font-size: 15px;
+}
+.detailsPrice{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/*  -- ITEM COUNT-- */
+.counterContainerStyle{
+    font-size:18px;
+    text-align:center;
+    margin: 3%;
+    padding: 1%;
+}
+.counterStyle{
+    display: flex;
+    justify-content:center;
+    align-items:baseline;
+}
+.quantitySytle{
+    width: 10%;
+}
+.addToCart{
+    font-size: 15px;
+}
+.finishBuying{
+    margin: 2%;
+}
+.finishBuyingButton{
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: honeydew;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.finishBuyingButton:hover{
+    background-color: #555555;
+    color: white;
 }

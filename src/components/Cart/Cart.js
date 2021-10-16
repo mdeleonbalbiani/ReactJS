@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
 
-    const { cart, emptyCart, deleteItem } = useContext(CartCtxt);
+    const { cart, emptyCart, deleteItem, totalPrice } = useContext(CartCtxt);
 
     return (
         <>
-            <h2>Tu carrito</h2>
+            <h1>Tu carrito</h1>
             {cart.length ? (
                 cart.map((item, index) => {
                     return(
@@ -19,16 +19,18 @@ const Cart = () => {
                             <div key={index} className="cartDetail">
                                 <img src={item.pictureURL} alt="Imagen del producto" className="cartImg"/>
                                 <div>
-                                    <h2>{item.title}</h2>
-                                    <span>
-                                        <Badge pill bg="success">Código: {item.id}</Badge>
-                                    </span>
-                                    <h3>Cantidad: {item.quantity}</h3>
+                                    <h2 className="cartTitle">{item.title}</h2>
+                                    <div className="cartInfo">
+                                        <h3>Cantidad: {item.quantity}</h3>
+                                        <h4>Precio: ${item.price}</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <p className="cartCross" onClick={()=>{deleteItem(item.id)}}>
-                                <ImCross/>
-                            </p>
+                            <div>
+                                <p className="cartCross" onClick={()=>{deleteItem(item.id, item.price, item.quantity)}}>
+                                    <ImCross/>
+                                </p>
+                            </div>
                         </div>
                     )
                 })
@@ -37,14 +39,19 @@ const Cart = () => {
             )}
 
             {cart.length ? (
-                <div className="cartButtonContainer">
-                    <Button className="cartButton cartButtonFinish">
-                        Finalizar compra
-                    </Button>
-                    <Button  className="cartButton" onClick={emptyCart}> 
-                        Vaciar carrito 
-                    </Button>
-                </div>  
+                <div>
+                    <div className="totalPrice">
+                        <h4 className="totalPriceNumber">Total: ${totalPrice}</h4>
+                    </div>
+                    <div className="cartButtonContainer">
+                        <Button className="cartButton cartButtonFinish">
+                            Finalizar compra
+                        </Button>
+                        <Button  className="cartButton" onClick={emptyCart}> 
+                            Vaciar carrito 
+                        </Button>
+                    </div>  
+                </div>
             ):(
                 <div className="backToHome">
                     <Link to="/" className="backToHomeButton">Ir al home</Link>

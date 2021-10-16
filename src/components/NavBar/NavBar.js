@@ -2,13 +2,12 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../Cart/CartWidget';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
 
 const NavBar = () => {
     return (
         <header>
             <nav className="navbar">
-                <Link to="/">
+                <Link to="/" className="logo">
                     <img src="https://res.cloudinary.com/dus99ir1n/image/upload/v1633443235/GlanGlow/granGlowLogo_hhtzit.png" alt="Logo corporativo" className="nav-logo"/>
                 </Link>
                 <ul className="nav-menu">

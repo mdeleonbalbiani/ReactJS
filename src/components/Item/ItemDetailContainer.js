@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './Item.css'
 import ItemDetail from "./ItemDetail";
 import products from '../data/products.json';
 import { useParams } from "react-router-dom";

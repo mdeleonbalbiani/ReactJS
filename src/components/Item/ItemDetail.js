@@ -1,5 +1,4 @@
 import React from "react";
-import '../Item/Item.css'
 import { Badge } from "react-bootstrap";
 import ItemCount from './ItemCount'
 
