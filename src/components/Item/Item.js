@@ -4,7 +4,7 @@ import ItemDetailContainer from './ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch} from "react-router-dom";
 
 const Item = (props) => {
-    const { id, title, price, pictureURL, stock, items } = props.props;
+    const { id, title, price, pictureURL, stock } = props.props;
     let { path, url } = useRouteMatch();
 
     return (

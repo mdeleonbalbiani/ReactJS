@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import Cart from './components/Cart/Cart'
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
+import Footer from './components/Footer/Footer';
 import CartContext from './context/cartContext';
 
 
@@ -40,6 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </CartContext>
   );
 }

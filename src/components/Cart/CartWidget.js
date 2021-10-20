@@ -5,14 +5,20 @@ import { CartCtxt  } from '../../context/cartContext';
 const CartWidget = () => {
     const { totalItems } = useContext(CartCtxt);
 
-    const stylesContainer = {display: "flex"}
-    const stylesIcon = {fontSize:'35px'}
-    const stylesItemAmount = {fontSize:'20px'}
     return(
-    <div style={stylesContainer}>
-        <IoCartOutline style={stylesIcon}/>
-        <p style={stylesItemAmount}> {totalItems} </p>
-    </div>)
+        <>
+            {totalItems!==0 ? (
+                    <div className="cartWidgetContainer">
+                        <IoCartOutline className="cartIcon" />
+                        <p className="cartItemAmount"> {totalItems} </p>
+                    </div>
+                ):(
+                    <div className="cartWidgetContainer">
+                        <IoCartOutline className="cartIcon" />
+                    </div>
+                )
+            }
+        </>)
 }
 
 export default CartWidget;

@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import { CartCtxt } from "../../context/cartContext";
 import { ImCross } from "../../../node_modules/react-icons/im";
 import '../Styles.css'
-import { Badge, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -15,8 +15,8 @@ const Cart = () => {
             {cart.length ? (
                 cart.map((item, index) => {
                     return(
-                        <div className="cartItem">
-                            <div key={index} className="cartDetail">
+                        <div  key={index} className="cartItem">
+                            <div className="cartDetail">
                                 <img src={item.pictureURL} alt="Imagen del producto" className="cartImg"/>
                                 <div>
                                     <h2 className="cartTitle">{item.title}</h2>

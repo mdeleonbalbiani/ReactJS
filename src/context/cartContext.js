@@ -24,22 +24,23 @@ const CartContext = ({children}) => {
         }
         else{
             setCart([...cart, productToAdd]);
-            setTotalItems(totalItems + 1);
         }
         setTotalPrice(totalPrice + productToAdd.price);
+        setTotalItems(totalItems + productToAdd.quantity);
     }
 
     const emptyCart = () => {
         if (window.confirm("¿Estó seguro que desea vaciar el carrito?")) {
             setCart([]);
             setTotalItems(0);
+            setTotalPrice(0)
         }
     }
 
     const deleteItem = (id, price, quantity) => {
         const newCartList = cart.filter((item) => item.id !== id);
         setCart(newCartList);
-        setTotalItems(totalItems - 1);
+        setTotalItems(totalItems - quantity);
         const priceToSubtract = price * quantity;
         setTotalPrice(totalPrice - priceToSubtract);
     }

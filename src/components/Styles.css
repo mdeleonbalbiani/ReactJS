@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
 
 /*  -- GENERAL -- */
@@ -297,4 +297,63 @@ span{
 .finishBuyingButton:hover{
     background-color: #555555;
     color: white;
+}
+
+/*  -- HOME-- */
+
+.carousel{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+/*  -- FOOTER-- */
+
+.social-footer {
+    background: #3f3f3f;
+    display: flex;
+    align-items: center;
+}
+.logoFooter{
+    width: 40%;
+}
+
+.menuSimple{
+    display: flex;
+}
+
+.footerSocialMediaIcon{
+    margin-right: 50%;
+}
+
+.socialMediaIcon{
+    font-size: 2.5rem;
+    color: #fefefe;
+    padding: 3%;
+}
+
+.socialMediaIcon:hover {
+color: #c04cad;
+transition: color 0.3s ease-in;
+}
+
+.footerCopyright{
+    display: flex;
+    margin-left: 40%;
+    font-size: 1rem;
+    color: rgb(255, 205, 240);
+}
+
+/*  --  CART WIDGET  --  */
+
+.cartWidgetContainer{
+    display: flex;
+}
+
+.cartIcon{
+    font-size: 35px;
+}
+
+.cartItemAmount{
+    font-size: 20px;
 }
