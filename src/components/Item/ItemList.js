@@ -7,15 +7,14 @@ function ItemList( {items} ) {
       marginTop: "3%"
     }
 
-    const productList = items.length ? (
-      items.map((elem, index) => <Item props={elem} key={index} />)
-    ) : (
-      <Spinner animation="border" variant="primary" style={Style}/>
-    )
 
     return (
         <>
-          {productList}
+          {items.length ? (
+            items.map((elem, index) => <Item props={elem} key={index} />)
+          ) : (
+            <Spinner animation="border" variant="primary" style={Style}/>
+          )}
         </>
       );
   }
