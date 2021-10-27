@@ -9,7 +9,7 @@ import Cart from './components/Cart/Cart'
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import CartContext from './context/cartContext';
-import Buyer from './components/Purchase/buyer';
+import Checkout from './components/Checkout/checkout';
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
               <ItemDetailContainer/>
           </Route>
           <Route path="/finishPurchase">
-              <Buyer />
+              <Checkout />
           </Route>
         </Switch>
       </Router>

@@ -44,9 +44,10 @@ const CartContext = ({children}) => {
         const priceToSubtract = price * quantity;
         setTotalPrice(totalPrice - priceToSubtract);
     }
+    
 
     return (
-        <CartCtxt.Provider value={ {cart, setCart, addToCart, emptyCart, deleteItem, totalItems, totalPrice} }>
+        <CartCtxt.Provider value={ {cart, setCart, addToCart, emptyCart, deleteItem, totalItems, totalPrice, setTotalPrice, setTotalItems} }>
          {children}
         </CartCtxt.Provider>
     )

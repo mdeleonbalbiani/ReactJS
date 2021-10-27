@@ -4,8 +4,8 @@ import { CartCtxt } from "../../context/cartContext";
 import { Redirect } from "react-router-dom";
 import { getFirestore } from '../../firebase'; 
 
-const Buyer = () => {
-  const { cart, totalPrice, setCart } = useContext(CartCtxt);
+const Checkout = () => {
+  const { cart, totalPrice, setCart, setTotalItems, setTotalPrice, totalItems } = useContext(CartCtxt);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -46,7 +46,7 @@ const Buyer = () => {
           .add(order)
           .then((resultado) => {
             alert(`Su numero de orden es ${resultado.id} 
-         Gracias por su compra`);
+                  Gracias por su compra`);
           });
       } catch (e) {
         console.log(e);
@@ -55,9 +55,15 @@ const Buyer = () => {
       setPhone("");
       setName("");
       setEmail("");
-      setCart([]);
+      emptyAll();
     }
   };
+
+  const emptyAll = () => {
+    setCart([]);
+    setTotalItems(0);
+    setTotalPrice(0)
+  }
 
   return (
     <>
@@ -119,4 +125,4 @@ const Buyer = () => {
   );
 };
 
-export default Buyer;
+export default Checkout;
