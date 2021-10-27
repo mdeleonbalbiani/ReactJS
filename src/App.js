@@ -9,6 +9,7 @@ import Cart from './components/Cart/Cart'
 import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import CartContext from './context/cartContext';
+import Buyer from './components/Purchase/buyer';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/category/food/:id">
               <ItemDetailContainer/>
+          </Route>
+          <Route path="/finishPurchase">
+              <Buyer />
           </Route>
         </Switch>
       </Router>
