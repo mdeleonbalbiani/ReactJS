@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
+
+
 /*  -- GENERAL -- */
 
 * {
@@ -11,12 +19,13 @@
 h1{
     text-align: center;
     margin: 1%;
+    text-transform: uppercase;
     font-size: 35px;
-    font-family: 'Stick No Bills', sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(199, 56, 108, 1),-3px 0px 14px rgba(199, 44, 127, 1);
-    color: rgb(20, 20, 20);
-    letter-spacing: 5px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    text-shadow: 2.3px 0px 0px rgb(211, 57, 139);
+    color: rgb(79, 79, 82);
+    letter-spacing: 1px;
 }
 html {
     font-size: 62.5%;
@@ -34,8 +43,8 @@ span{
     font-size: 12px;
 }
 
-
 /*  -- NAV BAR -- */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -59,21 +68,17 @@ span{
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 2rem;
 }
-
 .nav-link{
     font-size: 1.7rem;
     font-weight: 400;
     color: white;
 }
-
 .nav-link:hover{
     color: #482ff7;
 }
-
 .nav-logo {
     width: 50%;
 }
@@ -92,37 +97,29 @@ span{
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
-
     .nav-menu.active {
         left: 0;
     }
-    
     .nav-link{
         color: black;
     }
-
     .nav-item {
         margin: 2.5rem 0;
     }
-
     .hamburger {
         display: block;
         cursor: pointer;
     }
-
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
 
 /*  -- CART -- */
 
@@ -194,14 +191,15 @@ span{
     font-size: 15px;
 }
 .cartButtonFinish{
+    color: white;
     background-color: rgb(196, 36, 156) ;
     border: rgb(196, 36, 156);
 }
 .cartButtonFinish:hover{
+    color: white;
     background-color: rgb(177, 49, 145) ;
     border: rgb(177, 49, 145);
 }
-
 
 /*  -- ITEM -- */
 
@@ -264,6 +262,7 @@ span{
 }
 
 /*  -- ITEM COUNT-- */
+
 .counterContainerStyle{
     font-size:18px;
     text-align:center;
@@ -305,7 +304,26 @@ span{
     margin-top: 1%;
     margin-bottom: 1%;
 }
+.paymentInfo{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
 
+/*  -- PAYMENT METHODS  --  */
+
+.paymentMethods{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paymentMethods img{
+    height: 30px;
+}
+.paymentMethods p{
+    font-size: 12px;
+}
 
 /*  -- FOOTER-- */
 
@@ -317,26 +335,21 @@ span{
 .logoFooter{
     width: 40%;
 }
-
 .menuSimple{
     display: flex;
 }
-
 .footerSocialMediaIcon{
     margin-right: 50%;
 }
-
 .socialMediaIcon{
     font-size: 2.5rem;
     color: #fefefe;
     padding: 3%;
 }
-
 .socialMediaIcon:hover {
 color: #c04cad;
 transition: color 0.3s ease-in;
 }
-
 .footerCopyright{
     display: flex;
     margin-left: 40%;
@@ -349,11 +362,82 @@ transition: color 0.3s ease-in;
 .cartWidgetContainer{
     display: flex;
 }
-
 .cartIcon{
     font-size: 35px;
 }
-
 .cartItemAmount{
     font-size: 20px;
+}
+
+/*  --  ABOUT US  --  */
+
+.phraseBox{
+    border: 1px solid rgba(16, 16, 240, 0.774);
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+    background-color: rgba(16, 16, 240, 0.774);
+    box-shadow: -7px -7px 0px -2px rgba(240, 50, 208, 0.904);
+        -webkit-box-shadow: -7px -7px 0px -2px rgba(240, 50, 208, 0.904);
+        -moz-box-shadow: -7px -7px 0px -2px rgba(240, 50, 208, 0.904);
+    background-image: url("https://res.cloudinary.com/dus99ir1n/image/upload/c_scale,w_230/v1636299613/GlanGlow/arnold-schwarzenegger_yju0bz.png");
+    background-repeat: no-repeat;
+    transform: rotate(2deg);
+}
+.phrase{
+    margin-left: 20rem;
+}
+.sign{
+    font-family: 'Beth Ellen', cursive;
+    text-align: right;
+}
+
+.textBox{
+    padding: 3%;
+    font-size: 18px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+.bg{
+    background-color: rgba(255, 235, 205, 0.932);
+    padding: 2%;
+    width: 80%;
+    margin: auto;
+}
+.textBox--wImage{
+    display: flex;
+    align-items: center;
+}
+.textBox--wImage img{
+    margin: 1%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info--title{
+    font-size: 22px;
+}
+.shipping{
+    width: 38%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.shippingIcon{
+    color: green;
+    font-size: 25px;
+    margin: 1%;
+}
+
+/*  --  CHECKOUT  --  */
+.checkout{
+    font-size: 15px;
+}
+.payment{
+    margin: 2%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
 }

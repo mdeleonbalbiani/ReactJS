@@ -44,7 +44,7 @@ const Cart = () => {
                         <h4 className="totalPriceNumber">Total: ${totalPrice}</h4>
                     </div>
                     <div className="cartButtonContainer">
-                        <Link to="/finishPurchase" className="cartButton cartButtonFinish">
+                        <Link to="/finishPurchase" className="cartButton cartButtonFinish btn">
                             Finalizar compra
                         </Link>
                         <Button  className="cartButton" onClick={emptyCart}> 

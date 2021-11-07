@@ -1,8 +1,10 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import PaymentMethods from "../Payment Methods/paymentMethods";
 
 const Home = () => {
     return (
+        <>
             <Carousel className="carousel">
                 <Carousel.Item>
                     <img
@@ -26,6 +28,10 @@ const Home = () => {
                     />
                 </Carousel.Item>
             </Carousel>
+            <div className="paymentInfo">
+                <PaymentMethods />
+            </div> 
+        </>
     )
 }
 

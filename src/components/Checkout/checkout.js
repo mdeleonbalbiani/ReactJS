@@ -2,7 +2,9 @@ import React, { useState, useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { CartCtxt } from "../../context/cartContext";
 import { Redirect } from "react-router-dom";
-import { getFirestore } from '../../firebase'; 
+import { getFirestore } from '../../firebase';
+import swal from "sweetalert";
+import PaymentMethods from "../Payment Methods/paymentMethods";
 
 const Checkout = () => {
   const { cart, totalPrice, setCart, setTotalItems, setTotalPrice, totalItems } = useContext(CartCtxt);
@@ -14,14 +16,8 @@ const Checkout = () => {
 
   const setOrders = async (e) => {
     e.preventDefault();
-    if (!name.trim()) {
-      setError("El campo nombre esta vacio");
-    }
-    if (!phone.trim()) {
-      setError("El campo telefono esta vacio");
-    }
-    if (!email.trim()) {
-      setError("El campo email esta vacio");
+    if (!name.trim() || !phone.trim() || !email.trim()) {
+      setError("Complete todos los campos, por favor");
     } else {
       const order = {
         buyer: {
@@ -45,8 +41,12 @@ const Checkout = () => {
           .collection("orders")
           .add(order)
           .then((resultado) => {
-            alert(`Su numero de orden es ${resultado.id} 
-                  Gracias por su compra`);
+            swal({
+              title: "Gracias por su compra",
+              text: `Su numero de orden es ${resultado.id}`,
+              icon: "success",
+              button: "Aceptar"
+            })
           });
       } catch (e) {
         console.log(e);
@@ -68,11 +68,11 @@ const Checkout = () => {
   return (
     <>
       {cart.length > 0 ? (
-        <Container className="d-flex justify-content-center">
+        <Container className="d-flex justify-content-center checkout">
           <div className="border border-secondary col-lg-6 mt-5 p-5">
-            <h5 className="text-center">
+            <h3 className="text-center">
               Complete los siguientes datos para finalizar su compra
-            </h5>
+            </h3>
             <Form onSubmit={setOrders}>
               <Form.Group className="mb-3 mt-5" controlId="formBasicName">
                 <Form.Label>Nombre</Form.Label>
@@ -121,6 +121,9 @@ const Checkout = () => {
       ) : (
         <Redirect to="/" />
       )}
+      <div className="payment">
+        <PaymentMethods />
+      </div>
     </>
   );
 };
