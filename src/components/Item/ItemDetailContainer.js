@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import products from '../data/products.json';
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { getFirestore } from '../../firebase'
@@ -19,19 +18,6 @@ const ItemDetailContainer = () => {
   };
   getProducts();
 }, [id]);
-
-  /* useEffect(() => {
-    const data = new Promise((resolve, reject) => {
-      setTimeout(function () {
-        resolve(products);
-      }, 1000);
-    });
-
-    data.then( response => {
-      setItemFiltered( response.filter(item => (item.id === id)) );
-    });
-  }, [id]); */
-
 
   return (
     <>

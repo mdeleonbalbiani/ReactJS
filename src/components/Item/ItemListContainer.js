@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CardGroup } from "react-bootstrap";
 import ItemList from './ItemList'
-//import products from '../data/products.json'
 import { getFirestore } from '../../firebase'
 
 const ItemListContainer = ( {itemCategory} ) => {
@@ -16,21 +15,6 @@ const ItemListContainer = ( {itemCategory} ) => {
     };
     getProducts();
   }, [itemCategory]);
-
-    /* useEffect(() => {
-      const data = getFirestore();
-      const itemCollection = data.collection('products');
-
-      itemCollection.get().then((item) => {        
-        setProductsList(item.docs.map(doc => doc.data()));
-        console.log(productsList);
-        setFilteredProducts(productsList.filter(item => (item.category === itemCategory)));
-        console.log(filteredProducts);
-      }).catch((error) => {
-        console.log('Error al traer los items' , error);
-      });
-    }, [itemCategory] ); */
-
 
     let categoryTitle="";
     if (itemCategory === "nutrition") {
