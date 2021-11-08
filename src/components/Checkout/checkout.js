@@ -86,7 +86,7 @@ const Checkout = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPhone">
-                <Form.Label>Telefono</Form.Label>
+                <Form.Label>Teléfono</Form.Label>
                 <Form.Control
                   value={phone}
                   type="number"
