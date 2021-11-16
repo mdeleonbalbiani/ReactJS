@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import CartContext from './context/cartContext';
 import Checkout from './components/Checkout/checkout';
+import NotFound from './components/404/notFound';
 
 function App() {
   return (
@@ -26,25 +27,20 @@ function App() {
           <Route exact path="/cart">
               <Cart />
           </Route>
-
           <Route path="/category/nutrition">
               <ItemListContainer itemCategory="nutrition"/>
           </Route>
           <Route path="/category/food">
               <ItemListContainer itemCategory="food"/>
           </Route>
-          <Route path="/category/nutrition/:id">
-              <ItemDetailContainer/>
-          </Route>
-          <Route path="/category/food/:id">
-              <ItemDetailContainer/>
-          </Route>
+          <Route exact path="/item/:id" component={ ItemDetailContainer } />
           <Route path="/finishPurchase">
               <Checkout />
           </Route>
+          <Route path="*" component={NotFound} />
         </Switch>
-      </Router>
       <Footer />
+      </Router>
     </CartContext>
   );
 }

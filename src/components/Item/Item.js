@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, Badge } from "react-bootstrap";
 import ItemDetailContainer from './ItemDetailContainer';
-import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch} from "react-router-dom";
+import { BrowserRouter as Router, Link} from "react-router-dom";
 
 const Item = (props) => {
     const { id, title, price, pictureURL, stock } = props.props;
-    let { path, url } = useRouteMatch();
 
     return (
       <Router>
@@ -22,15 +21,17 @@ const Item = (props) => {
                 <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                 </span>
                 <span className="cardPrice"> Precio: ${price} </span>
-                <Link to={`${url}/product/${id}`} className="cardButton">Ver Detalle</Link>
+                <Link
+                  to={`/item/${id}`}
+                  className="cardButton"
+                >
+                  Ver detalle
+                </Link>
               </Card.Text>
               </Card.Body>
           </Card>
         </div>
 
-        <Switch>
-          <Route path={`${path}/product/:id`} children={<ItemDetailContainer />} />
-        </Switch>
       </Router>
         
       );

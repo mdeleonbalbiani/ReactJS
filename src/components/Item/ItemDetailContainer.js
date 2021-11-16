@@ -6,18 +6,18 @@ import { getFirestore } from '../../firebase'
 
 const ItemDetailContainer = () => {
 
-  const { id } = useParams();
-  const [itemFiltered, setItemFiltered] = useState(0);
+  const { id: itemId } = useParams();
+  const [itemFiltered, setItemFiltered] = useState([0]);
 
   useEffect(() => {
     const getProducts = async () => {
       const { docs } = await getFirestore().collection("products").get();
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
       console.log(newArray);
-      setItemFiltered(newArray.filter((item) => (item.id === id)))
+      setItemFiltered(newArray.filter((item) => (item.id === itemId)))
   };
   getProducts();
-}, [id]);
+  }, [itemId]);
 
   return (
     <>
