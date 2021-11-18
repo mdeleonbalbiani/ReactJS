@@ -43,6 +43,11 @@ a{
 span{
     font-size: 12px;
 }
+.spinner{
+    display: flex;
+    justify-content: center;    
+    margin-top: 3%;
+}
 
 /*  -- NAV BAR -- */
 
@@ -251,8 +256,17 @@ span{
 /*  -- ITEM DETAIL-- */
 
 .details{
-    text-align:center;
-    height: 100%;
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+.details-info{
+    width: 50%;
+    margin: 2%;
+}
+.details-toCart{
+    text-align: center;
 }
 .itemDescription{
     font-size: 15px;
@@ -261,13 +275,16 @@ span{
     font-size:20px;
     font-weight:bold;
 }
+.buttonBackToShop{
+    font-size: 15px;
+    margin-bottom: 3%;
+}
 
 /*  -- ITEM COUNT-- */
 
 .counterContainerStyle{
     font-size:18px;
     text-align:center;
-    margin: 3%;
     padding: 1%;
 }
 .counterStyle{

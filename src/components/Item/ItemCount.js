@@ -8,19 +8,18 @@ const ItemCount = (props) => {
     const {stock, initial, id, title, pictureURL, precio} = props.props;
 
     const [quantity, setQuantity] = useState(initial);
-    const [stockAvailable, setStockAvailable] = useState(stock);
     const [estado, setEstado] = useState(true);
 
     const {addToCart} = useContext(CartCtxt);
 
     //Functions
     const add = () => {
-        if(quantity < stockAvailable){
+        if(quantity < stock){
             setQuantity(quantity + 1)
         }
     }
     const remove = () => {
-        if(quantity > 0){
+        if(quantity > 1){
             setQuantity(quantity - 1)
         }
     }

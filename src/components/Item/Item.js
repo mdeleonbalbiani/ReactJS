@@ -7,7 +7,6 @@ const Item = (props) => {
     const { id, title, price, pictureURL, stock } = props.props;
 
     return (
-      <Router>
         <div className="col-sm-6 col-md-3">
           <Card className="card">
               <Card.Img variant="top" src={pictureURL} className="cardImage" />
@@ -31,8 +30,6 @@ const Item = (props) => {
               </Card.Body>
           </Card>
         </div>
-
-      </Router>
         
       );
 }

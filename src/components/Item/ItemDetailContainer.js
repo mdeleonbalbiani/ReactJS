@@ -7,24 +7,24 @@ import { getFirestore } from '../../firebase'
 const ItemDetailContainer = () => {
 
   const { id: itemId } = useParams();
-  const [itemFiltered, setItemFiltered] = useState([0]);
+  const [itemFiltered, setItemFiltered] = useState(0);
 
   useEffect(() => {
     const getProducts = async () => {
       const { docs } = await getFirestore().collection("products").get();
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
-      console.log(newArray);
-      setItemFiltered(newArray.filter((item) => (item.id === itemId)))
+      const findProduct = newArray.filter((item) => (item.id === itemId));
+      setItemFiltered(findProduct);
   };
-  getProducts();
-  }, [itemId]);
+    getProducts();
+    }, [itemId]);
 
   return (
     <>
      {itemFiltered.length ? (
         <ItemDetail props={itemFiltered[0]}/>
       ) : (
-        <Spinner animation="border" variant="primary" />
+        <Spinner animation="border" variant="primary" className="spinner"/>
       )}
     </>
   );
