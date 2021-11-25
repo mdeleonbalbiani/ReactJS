@@ -13,7 +13,8 @@ Al final encontraremos un botón que indica "Finalizar compra", el cuál nos pid
 Adicionalmente la página cuenta con sección de "Home" y "Sobre nosotros", donde se habla sobre la empresa.
 
 ### Vista previa:
-![Alt Text](https://res.cloudinary.com/dgcnv5j5c/image/upload/v1635874439/wantaSushi/wanta-ecommerce-demo.gif)
+Un rápido recorrido por la navegación del e-commerce
+![Alt Text](https://res.cloudinary.com/dus99ir1n/image/upload/v1637811361/GlanGlow/demostracionCompra_ouloay.gif)
 
 ## Tecnologias y librerias utilizadas
 

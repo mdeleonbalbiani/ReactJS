@@ -18,7 +18,7 @@ const ItemDetail = (props) => {
     return(
         <>
             <div className="details container">
-                <img src={pictureURL} alt="Imagen del producto"/>
+                <img src={pictureURL} alt="Imagen del producto" className="detailImage"/>
                 <div className="details-info">
                     <h2>{title}</h2>
                     <p className="itemDescription">{description}</p>

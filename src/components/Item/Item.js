@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Badge } from "react-bootstrap";
-import ItemDetailContainer from './ItemDetailContainer';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
     const { id, title, price, pictureURL, stock } = props.props;

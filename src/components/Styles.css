@@ -279,6 +279,9 @@ span{
     font-size: 15px;
     margin-bottom: 3%;
 }
+.detailImage{
+    height: 55vh;
+}
 
 /*  -- ITEM COUNT-- */
 

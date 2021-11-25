@@ -7,7 +7,7 @@ import swal from "sweetalert";
 import PaymentMethods from "../Payment Methods/paymentMethods";
 
 const Checkout = () => {
-  const { cart, totalPrice, setCart, setTotalItems, setTotalPrice, totalItems } = useContext(CartCtxt);
+  const { cart, totalPrice, setCart, setTotalItems, setTotalPrice } = useContext(CartCtxt);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
