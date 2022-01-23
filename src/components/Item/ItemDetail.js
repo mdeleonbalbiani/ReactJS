@@ -31,7 +31,7 @@ const ItemDetail = (props) => {
                             <Badge pill bg="primary">Stock disponible: {stock}</Badge>
                         </span>
                         <ItemCount props={product}/>
-                        <Link to={`/category/${category}`}>
+                        <Link to={`/ReactJS/category/${category}`}>
                             <Button variant="outline-dark" className="buttonBackToShop">Volver a la tienda</Button>
                         </Link>
                     </div>

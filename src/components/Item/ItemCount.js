@@ -46,7 +46,7 @@ const ItemCount = (props) => {
             </div>
         ) : (
             <div className="finishBuying">
-                <Link to="/cart" className="finishBuyingButton">Finalizar compra</Link>
+                <Link to="/ReactJS/cart" className="finishBuyingButton">Finalizar compra</Link>
             </div>
         )
     )

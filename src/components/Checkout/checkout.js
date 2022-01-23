@@ -119,7 +119,7 @@ const Checkout = () => {
           </div>
         </Container>
       ) : (
-        <Redirect to="/" />
+        <Redirect to="/ReactJS/" />
       )}
       <div className="payment">
         <PaymentMethods />

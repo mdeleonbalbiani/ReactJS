@@ -44,7 +44,7 @@ const Cart = () => {
                         <h4 className="totalPriceNumber">Total: ${totalPrice}</h4>
                     </div>
                     <div className="cartButtonContainer">
-                        <Link to="/finishPurchase" className="cartButton cartButtonFinish btn">
+                        <Link to="/ReactJS/finishPurchase" className="cartButton cartButtonFinish btn">
                             Finalizar compra
                         </Link>
                         <Button  className="cartButton" onClick={emptyCart}> 
@@ -54,7 +54,7 @@ const Cart = () => {
                 </div>
             ):(
                 <div className="backToHome">
-                    <Link to="/" className="backToHomeButton">Ir al home</Link>
+                    <Link to="/ReactJS/" className="backToHomeButton">Ir al home</Link>
                 </div>
             )
             }

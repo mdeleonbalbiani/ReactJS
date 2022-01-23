@@ -7,21 +7,21 @@ const NavBar = () => {
     return (
         <header>
             <nav className="navbar">
-                <Link to="/" className="logo">
+                <Link to="/ReactJS/" className="logo">
                     <img src="https://res.cloudinary.com/dus99ir1n/image/upload/v1633443235/GlanGlow/granGlowLogo_hhtzit.png" alt="Logo corporativo" className="nav-logo"/>
                 </Link>
                 <ul className="nav-menu">
                     <li className="nav-item">
-                        <Link to="/aboutUs" className="nav-link">Sobre nosotros</Link>
+                        <Link to="/ReactJS/aboutUs" className="nav-link">Sobre nosotros</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/category/nutrition" className="nav-link">Nutrición deportiva</Link>
+                        <Link to="/ReactJS/category/nutrition" className="nav-link">Nutrición deportiva</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/category/food" className="nav-link">Alimentación saludable</Link>
+                        <Link to="/ReactJS/category/food" className="nav-link">Alimentación saludable</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/cart" className="nav-link">
+                        <Link to="/ReactJS/cart" className="nav-link">
                             <CartWidget/>
                         </Link>
                     </li>
