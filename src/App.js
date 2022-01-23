@@ -18,23 +18,23 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/ReactJS/">
               <Home />
           </Route>
-          <Route exact path="/aboutUs">
+          <Route exact path="/ReactJS/aboutUs">
               <AboutUs />
           </Route>
-          <Route exact path="/cart">
+          <Route exact path="/ReactJS/cart">
               <Cart />
           </Route>
-          <Route path="/category/nutrition">
+          <Route path="/ReactJS/category/nutrition">
               <ItemListContainer itemCategory="nutrition"/>
           </Route>
-          <Route path="/category/food">
+          <Route path="/ReactJS/category/food">
               <ItemListContainer itemCategory="food"/>
           </Route>
-          <Route exact path="/item/:id" component={ ItemDetailContainer } />
-          <Route path="/finishPurchase">
+          <Route exact path="/ReactJS/item/:id" component={ ItemDetailContainer } />
+          <Route path="/ReactJS/finishPurchase">
               <Checkout />
           </Route>
           <Route path="*" component={NotFound} />

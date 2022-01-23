@@ -20,7 +20,7 @@ const Item = (props) => {
                 </span>
                 <span className="cardPrice"> Precio: ${price} </span>
                 <Link
-                  to={`/item/${id}`}
+                  to={`/ReactJS/item/${id}`}
                   className="cardButton"
                 >
                   Ver detalle
